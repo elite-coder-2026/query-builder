@@ -1,0 +1,73 @@
+{
+    "name": "@kaylios/query-builder",
+    "version": "1.0.0",
+    "description": "Fluent SQL query builder for Node.js - part of the Kaylios ecosystem",
+    "main": "src/index.js",
+    "types": "types/index.d.ts",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "lint": "eslint src/",
+        "format": "prettier --write \"src/**/*.js\"",
+        "prepublishOnly": "npm test && npm run lint",
+        "docs": "jsdoc src/ -d docs"
+    },
+    "keywords": [
+        "kaylios",
+        "query-builder",
+        "database",
+        "sql",
+        "postgres",
+        "mysql",
+        "sqlite",
+        "fluent",
+        "orm"
+    ],
+    "author": "Kaylios <dev@kaylios.com>",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kaylios/query-builder.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kaylios/query-builder/issues"
+    },
+    "homepage": "https://github.com/kaylios/query-builder#readme",
+    "license": "MIT",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "dependencies": {
+        "pg": "^8.11.0",
+        "mysql2": "^3.6.0",
+        "sqlite3": "^5.1.6",
+        "mongodb": "^5.7.0"
+    },
+    "devDependencies": {
+        "jest": "^29.0.0",
+        "eslint": "^8.0.0",
+        "eslint-config-kaylios": "^1.0.0",
+        "prettier": "^3.0.0",
+        "jsdoc": "^4.0.0"
+    },
+    "peerDependencies": {
+        "pg": "^8.x",
+        "mysql2": "^3.x"
+    },
+    "peerDependenciesMeta": {
+        "pg": {
+            "optional": true
+        },
+        "mysql2": {
+            "optional": true
+        },
+        "sqlite3": {
+            "optional": true
+        },
+        "mongodb": {
+            "optional": true
+        }
+    }
+}
